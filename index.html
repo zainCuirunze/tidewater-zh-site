@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+	<meta name="theme-color" content="#04121c" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<title>潮汐渔岛</title>
+	<link rel="preload" as="image" href="ui/keyart-720.jpg" imagesrcset="ui/keyart-720.jpg 1280w, ui/keyart.jpg 2560w" imagesizes="100vw" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Caveat+Brush&family=Kalam:wght@400;700&display=swap" rel="stylesheet" />
+	<!-- 中文回退：为现有字体族补充系统中文字体，避免逐处改 CSS -->
+	<style>@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:local(PingFang SC),local(Hiragino Sans GB),local(Microsoft YaHei),local(Noto Sans CJK SC),local(Source Han Sans SC),local(WenQuanYi Micro Hei);unicode-range:U+2E80-303F,U+3040-30FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF}@font-face{font-family:JetBrains Mono;font-style:normal;font-weight:100 900;font-display:swap;src:local(PingFang SC),local(Hiragino Sans GB),local(Microsoft YaHei),local(Noto Sans CJK SC),local(Source Han Sans SC);unicode-range:U+2E80-303F,U+3040-30FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF}@font-face{font-family:Caveat Brush;font-style:normal;font-weight:400;font-display:swap;src:local(PingFang SC),local(Hiragino Sans GB),local(Microsoft YaHei),local(Noto Sans CJK SC);unicode-range:U+2E80-303F,U+3040-30FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF}@font-face{font-family:Kalam;font-style:normal;font-weight:400 700;font-display:swap;src:local(PingFang SC),local(Hiragino Sans GB),local(Microsoft YaHei),local(Noto Sans CJK SC);unicode-range:U+2E80-303F,U+3040-30FF,U+3400-4DBF,U+4E00-9FFF,U+F900-FAFF,U+FE30-FE4F,U+FF00-FFEF}</style>
+	<style>html,body{touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;overscroll-behavior:none;background:#000;width:100%;height:100%;margin:0;padding:0;overflow:hidden}#app,#app canvas{display:block}#fps{z-index:50;color:#e8f6ff;pointer-events:none;-webkit-backdrop-filter:blur(8px);letter-spacing:.02em;background:#080e168c;border-radius:6px;padding:5px 9px;font:500 12px/1.2 JetBrains Mono,ui-monospace,monospace;position:fixed;top:10px;left:12px}</style>
+  <script type="module" crossorigin src="./assets/index-DQe_v2gJ.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/GPU-CCgDO5fU.js">
+  <link rel="modulepreload" crossorigin href="./assets/Frame-Baeda3sr.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-BNuc1anq.css">
+</head>
+<body>
+	<div id="app"></div>
+	<div id="fps">-- fps</div>
+	<div id="loader" role="status" aria-live="polite" aria-label="正在加载潮汐渔岛">
+		<img class="loader-art" src="ui/keyart-720.jpg" srcset="ui/keyart-720.jpg 1280w, ui/keyart.jpg 2560w" sizes="100vw" alt="" decoding="async" fetchpriority="high" onload="this.classList.add('is-in')" />
+		<div class="loader-scrim"></div>
+		<div class="loader-inner">
+			<div class="loader-brand">
+				<p class="loader-kicker">一座海岛钓鱼游戏</p>
+				<h1 class="loader-title">潮汐渔岛</h1>
+				<p class="loader-tagline">驾船出海，在礁区与深水区下竿，赶在天黑前把渔获卖给乔。</p>
+			</div>
+			<div class="loader-panel">
+				<div class="loader-row">
+					<span class="loader-status">正在启动…</span>
+					<span class="loader-meta"><span class="loader-pct">0%</span><span class="loader-time">0:00</span></span>
+				</div>
+				<div class="loader-bar"><div class="loader-fill"></div><div class="loader-glint"></div></div>
+				<div class="loader-note">首次启动需要编译着色器，可能需要一两分钟。之后再进入就会快很多。</div>
+				<div class="loader-tips">
+					<span class="loader-tip-label">提示</span>
+					<div class="loader-tip-list">
+						<p class="loader-tip" data-touch="点「鱼竿」取出钓竿，再按住「抛竿」蓄力，松手抛出：按得越久抛得越远。">按 <kbd>R</kbd> 取出钓竿。按住鼠标左键蓄力，松手抛出：按得越久抛得越远。</p>
+						<p class="loader-tip" data-touch="盯住浮标。先试探几下，然后被拖入水中：就在那一刻点「刺鱼」。">盯住浮标。先试探几下，然后被拖入水中：就在那一刻点击鼠标左键提竿刺鱼。</p>
+						<p class="loader-tip" data-touch="搏鱼时按住「收线」滑杆收线，让张力保持在绿色区间；鱼发力时要松手，否则线会断。">搏鱼时按住左键收线，但要把线的张力保持在绿色区间。鱼发力时要松手，否则线会断。</p>
+						<p class="loader-tip">能钓到什么取决于你下竿的位置：浅滩、礁区、断崖外的深水区，以及一天中的时辰。</p>
+						<p class="loader-tip">栈桥边鱼摊的乔会收购你的渔获。鱼越重越值钱，所以尽量把大鱼带回来。</p>
+						<p class="loader-tip">船屋旁的玛尔塔出售升级件：更结实的鱼线、更快的卷线器、更大的鱼舱、更多燃油和探鱼器。</p>
+						<p class="loader-tip" data-touch="点「交互」上船，在舵位再点一次掌舵，再点一次即可离开舵位在甲板上走动。">在船边按 <kbd>E</kbd> 上船，在舵位按一次掌舵，再按一次即可离开舵位在甲板上走动。</p>
+						<p class="loader-tip" data-touch="点「冷藏箱」查看渔获和鱼类图鉴。玛尔塔的甲板灯让你在天黑后也能钓鱼。">按 <kbd>I</kbd> 打开冷藏箱和鱼类图鉴。玛尔塔的甲板灯让你在天黑后也能钓鱼。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// 触屏设备：把提示里的键鼠说法换成触屏说法
+		try {
+			var isTouch = ( 'ontouchstart' in window ) || ( navigator.maxTouchPoints > 0 );
+			if ( isTouch && matchMedia( '(pointer: coarse)' ).matches ) {
+				document.querySelectorAll( '.loader-tip[data-touch]' ).forEach( function ( p ) {
+					p.innerHTML = p.getAttribute( 'data-touch' );
+				} );
+			}
+		} catch ( e ) { /* ignore */ }
+	</script>
+</body>
+</html>
